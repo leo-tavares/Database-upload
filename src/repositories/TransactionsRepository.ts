@@ -18,10 +18,10 @@ class TransactionsRepository extends Repository<Transaction> {
         const { type } = transaction;
         switch (type) {
           case 'income':
-            acc.income += transaction.value;
+            acc.income += Number(transaction.value);
             break;
           case 'outcome':
-            acc.outcome += transaction.value;
+            acc.outcome += Number(transaction.value);
             break;
           default:
             break;
